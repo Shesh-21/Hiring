@@ -121,7 +121,10 @@ function JobDetails() {
           </h2>
 
           <p>
-            {job.intro}
+            <h3>
+              Location- {job.Location.join("")}
+            </h3>
+            
           </p>
 
 
@@ -168,65 +171,80 @@ function JobDetails() {
         {/* LEFT */}
 
         <div>
-
+        
           <article className="info-card">
-
             <h3>
               Job Description
             </h3>
-
             <p>
               {job.description}
             </p>
-
           </article>
 
 
           <article className="info-card">
-
             <h3>
               Key Responsibilities
             </h3>
-
             <ul>
-
               {job.responsibilities.map(
                 (item) => (
-
                   <li key={item}>
                     {item}
                   </li>
-
                 )
               )}
-
             </ul>
-
           </article>
 
 
           <article className="info-card">
-
             <h3>
               Requirements
             </h3>
-
             <ul>
-
               {job.requirements.map(
                 (item) => (
-
                   <li key={item}>
                     {item}
                   </li>
-
                 )
               )}
-
             </ul>
-
           </article>
 
+          <article className="info-card">
+            <h3>
+              Working Hours & Benefits
+            </h3>
+           <ul>
+              {job.workingHours.map(
+                (item) => (
+                  <li key={item}>
+                    {item}
+                  </li>
+                )
+              )}
+            </ul>
+          </article>
+
+           <article className="info-card">
+            <h3>
+              Salary
+            </h3>
+           <ul>
+              {job.salary.map(
+                (item) => (
+                  <li key={item}>
+                    {item}
+                  </li>
+                )
+              )}
+            </ul>
+          </article>
+            
+
+        
         </div>
 
 
