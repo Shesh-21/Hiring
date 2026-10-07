@@ -1,38 +1,5 @@
 export const jobs = [
-  // {
-  //   id: "welder",
-
-  //   title: "Welder",
-
-  //   image:
-  //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZgozw-SERKlQ_IVKaMM-e9CnOajqU24WT-HH3Xes3wIwnCuqhhM8y6PA&s=10",
-
-  //   short:
-  //     "Fabrication, welding and assembly work across projects.",
-
-  //   intro:
-  //     "Join our team as a Welder and work on practical engineering projects while building a stable and rewarding career.",
-
-  //   description:
-  //     "We are looking for skilled and dedicated Welders to join our team. The candidate will be responsible for welding, fabrication and joining of metal components as per project requirements while maintaining high quality and safety standards.",
-
-  //   responsibilities: [
-  //     "Perform welding, cutting and fitting of metal components.",
-  //     "Read and understand technical drawings and specifications.",
-  //     "Ensure high-quality and strong welds.",
-  //     "Maintain tools and equipment in good condition.",
-  //     "Follow all safety guidelines and company procedures.",
-  //     "Work effectively with the site and workshop team."
-  //   ],
-
-  //   requirements: [
-  //     "ITI / Diploma in a relevant trade preferred.",
-  //     "Knowledge of MIG, TIG or ARC welding is an advantage.",
-  //     "Ability to read basic technical drawings.",
-  //     "Freshers may apply for suitable openings.",
-  //     "Physically fit and willing to work on-site."
-  //   ]
-  // },
+  
 
   {
     id: "fitter",
