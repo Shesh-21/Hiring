@@ -359,11 +359,8 @@ button {
 .hero-status-dot {
   width: 8px;
   height: 8px;
-
   border-radius: 50%;
-
   background: #63d58b;
-
   box-shadow:
     0 0 0 5px rgba(99, 213, 139, 0.13);
 }
@@ -435,7 +432,6 @@ button {
 
 .hero-bottom-text strong {
   font-size: 13px;
-
   letter-spacing: 0.5px;
 }
 
@@ -444,118 +440,153 @@ button {
   font-size: 12px;
 }
 
+.hero-apply-cta {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left:90px;
+  gap: 30px;
+}
 
+.hero-apply-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-left: 3px solid var(--orange);
+  padding-left: 15px;
+}
+
+.hero-apply-text strong {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.hero-apply-text span {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 13px;
+}
+
+.hero-google-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 30px;
+  background: var(--orange);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 800;
+  box-shadow: 0 8px 22px rgba(232, 112, 16, 0.25);
+  transition: all 0.3s ease;
+}
+
+.hero-google-btn span {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.hero-google-btn:hover {
+  background: #f58220;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(232, 112, 16, 0.35);
+}
+
+.hero-google-btn:hover span {
+  transform: translate(3px, -3px);
+}
+
+@media (max-width: 768px) {
+  .hero-apply-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    margin-top: 25px;
+  }
+
+  .hero-google-btn {
+    width: 100px;
+  }
+}
 /* APPLICATION FORM*/
 
-.hero-form-wrapper {
+/* .hero-form-wrapper {
   background: rgba(255, 255, 255, 0.98);
-
   border-radius: 24px;
-
   padding: 28px;
-
   box-shadow:
     0 30px 70px rgba(0, 0, 0, 0.28);
-
   border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-
-/* Form header */
-
 .hero-form-header {
   display: flex;
-
   justify-content: space-between;
-
   align-items: flex-start;
-
   padding-bottom: 20px;
-
   margin-bottom: 5px;
-
   border-bottom: 1px solid var(--line);
 }
 
 .form-eyebrow {
   display: block;
-
   margin-bottom: 5px;
-
   color: var(--orange);
-
   font-size: 10px;
-
   font-weight: 800;
-
   letter-spacing: 1.5px;
 }
 
 .hero-form-header h2 {
   margin: 0;
-
   color: var(--navy);
-
   font-size: 28px;
 }
 
 .form-step {
   display: flex;
-
   flex-direction: column;
-
   align-items: flex-end;
-
   gap: 3px;
 }
 
 .form-step span {
   color: var(--orange);
-
   font-size: 22px;
-
   font-weight: 800;
 }
 
 .form-step small {
   color: var(--muted);
-
   font-size: 9px;
 }
 
-
-/* Form */
-
 .hero-application-form {
   display: flex;
-
   flex-direction: column;
-
   gap: 13px;
-
   padding-top: 17px;
 }
 
 
 .form-field {
   display: flex;
-
   flex-direction: column;
-
   gap: 6px;
 }
 
 .form-field label {
   color: var(--text);
-
-  font-size: 11px;
-
-  font-weight: 700;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .form-field label span {
   color: var(--muted);
-
   font-weight: 400;
 }
 
@@ -579,9 +610,7 @@ button {
 .form-field input:focus,
 .form-field select:focus {
   border-color: var(--blue);
-
   background: white;
-
   box-shadow:
     0 0 0 3px rgba(46, 107, 158, 0.08);
 }
@@ -592,34 +621,18 @@ button {
 }
 
 
-/* Two columns */
-
 .form-two-column {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
-
   gap: 12px;
-}
-
-
-/* =========================================
-   RESUME UPLOAD
-========================================= */
-
-.resume-upload {
+} */
+/* .resume-upload {
   position: relative;
-
   min-height: 58px;
-
   border: 1.5px dashed #cbd9e4;
-
   border-radius: 10px;
-
   background: #f9fbfd;
-
   overflow: hidden;
-
   transition: 0.2s ease;
 }
 
@@ -631,192 +644,108 @@ button {
 
 .resume-upload input {
   position: absolute;
-
   inset: 0;
-
   width: 100%;
   height: 100%;
-
   opacity: 0;
-
   cursor: pointer;
 }
 
 .upload-content {
   display: flex;
-
   align-items: center;
-
   gap: 12px;
-
   padding: 10px 13px;
-
   pointer-events: none;
 }
-
 .upload-icon {
   width: 34px;
   height: 34px;
-
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   border-radius: 8px;
-
   background: var(--orange-soft);
-
   color: var(--orange);
-
   font-size: 19px;
-
   font-weight: 700;
 }
-
 .upload-content strong {
   display: block;
-
   color: var(--navy);
-
   font-size: 11px;
 }
-
 .upload-content small {
   display: block;
-
   margin-top: 3px;
-
   color: var(--muted);
-
   font-size: 9px;
 }
-
-
-/* =========================================
-   FORM MESSAGE
-========================================= */
-
 .hero-form-message {
   padding: 10px 12px;
-
   border-radius: 8px;
-
   background: #eef9f2;
-
   border: 1px solid #c8e8d3;
-
   color: #2e7d4b;
-
   font-size: 11px;
-
   line-height: 1.5;
 }
-
-
-/* =========================================
-   SUBMIT BUTTON
-========================================= */
-
 .hero-submit-btn {
   width: 100%;
-
   height: 48px;
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   gap: 12px;
-
   border: none;
-
   border-radius: 10px;
-
   background: var(--orange);
-
   color: white;
-
   font-family: inherit;
-
   font-size: 13px;
-
   font-weight: 800;
-
   cursor: pointer;
-
   transition: all 0.25s ease;
 }
-
 .hero-submit-btn span {
   font-size: 18px;
-
   transition: transform 0.25s ease;
 }
-
 .hero-submit-btn:hover {
   background: #d9630a;
-
   transform: translateY(-2px);
-
   box-shadow:
     0 10px 25px rgba(232, 112, 16, 0.25);
 }
-
 .hero-submit-btn:hover span {
   transform: translateX(5px);
 }
-
-
 .form-note {
   margin: 0;
-
   color: #8a98a6;
-
   text-align: center;
-
   font-size: 9px;
-
   line-height: 1.5;
-}
-
-
-/* =========================================
-   TABLET
-========================================= */
-
+} */
 @media (max-width: 1050px) {
-
   .hero-container {
     grid-template-columns: 1fr 450px;
-
     gap: 40px;
   }
-
   .hero-content h1 {
     font-size: 58px;
   }
 
 }
 
-
-/* =========================================
-   MOBILE
-========================================= */
-
 @media (max-width: 850px) {
-
   .hero-new {
     min-height: auto;
   }
 
   .hero-container {
     grid-template-columns: 1fr;
-
     padding: 60px 5%;
-
     gap: 45px;
   }
 
@@ -831,41 +760,31 @@ button {
   .hero-description {
     font-size: 15px;
   }
-
   .hero-form-wrapper {
     max-width: 600px;
-
     width: 100%;
-
     box-sizing: border-box;
-
     margin: 0 auto;
   }
 
 }
-
-
 @media (max-width: 550px) {
-
   .hero-container {
     padding: 45px 5%;
   }
 
   .hero-badge-new {
     font-size: 9px;
-
     padding: 8px 12px;
   }
 
   .hero-content h1 {
     font-size: 43px;
-
     letter-spacing: -2px;
   }
 
   .hero-points {
     flex-direction: column;
-
     gap: 10px;
   }
 
@@ -875,14 +794,12 @@ button {
 
   .hero-form-wrapper {
     padding: 20px;
-
     border-radius: 18px;
   }
 
   .hero-form-header h2 {
     font-size: 24px;
   }
-
   .form-two-column {
     grid-template-columns: 1fr;
   }

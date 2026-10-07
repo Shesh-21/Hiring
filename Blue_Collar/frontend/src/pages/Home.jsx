@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { jobs } from "../data/jobs";
 
+
 function Home() {
 
     const [application, setApplication] = useState({
@@ -98,32 +99,30 @@ function Home() {
         
       </div> */}
 
-      <h1>
-         WE'RE HIRING
+      <h1 data-aos="fade-up">
+         Hum Hire Kar Rahe Hain
         <br />
-        <span>JOIN OUR TEAM</span>
+        <span>Humare Saath Jodein</span>
       </h1>
 
       <p className="hero-description">
-        We are looking for skilled and motivated people
-        to join our growing team. Whether you're an
-        experienced professional or a fresher, your
-        next opportunity could start here.
+        Hum apni growing team mein join karne ke liye skilled aur motivated logon ki talaash kar rahe hain. 
+        Chahe aap ek experienced professional hon ya fresher, aapka next opportunity yahin se start ho sakta hai.
       </p>
 
       <div className="hero-points">
 
-        <div>
+        <div data-aos="fade-left">
           <span>✓</span>
           Skilled & Experienced Team
         </div>
 
-        <div>
+        <div data-aos="fade-left" data-aos-delay="300">
           <span>✓</span>
           Freshers Welcome
         </div>
 
-        <div>
+        <div data-aos="fade-left" data-aos-delay="500">
           <span>✓</span>
           Real Industry Experience
         </div>
@@ -139,16 +138,35 @@ function Home() {
 
     </div>
 
+          <div className="hero-apply-cta" data-aos="fade-up" data-aos-delay="600">
+            <div className="hero-apply-text">
+              <strong>Ready to Join Us?</strong>
+              <span>Take the first step towards your next opportunity.</span>
+            </div>
+
+            <a
+              href="https://forms.gle/XCAo3TJoW5sd6a989"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hero-google-btn"
+            >
+              Abhi Apply Karein
+              <span>↗</span>
+            </a>
+          </div>
+
 
     {/*APPLICATION FORM*/}
 
-    <div className="hero-form-wrapper">
+    
+
+    {/* <div className="hero-form-wrapper" data-aos="fade-left" data-aos-delay="700">
 
       <div className="hero-form-header">
 
         <div>
           <h2>
-            Apply Now
+            Abhi Apply Karein
           </h2>
         </div>
       </div>
@@ -157,13 +175,11 @@ function Home() {
         className="hero-application-form"
         onSubmit={handleApplicationSubmit}
       >
-
-        {/* Name */}
-
+      
         <div className="form-field">
 
           <label htmlFor="hero-name">
-            Full Name
+            Aapka Naam (Full Name)
           </label>
 
           <input
@@ -179,12 +195,10 @@ function Home() {
         </div>
 
 
-        {/* Phone */}
-
         <div className="form-field">
 
           <label htmlFor="hero-phone">
-            Phone Number
+            Aapka Phone Number
           </label>
 
           <input
@@ -201,34 +215,10 @@ function Home() {
 
         </div>
 
-
-        {/* Email */}
-
-        <div className="form-field">
-
-          <label htmlFor="hero-email">
-            Email ID
-          </label>
-
-          <input
-            id="hero-email"
-            type="email"
-            name="email"
-            placeholder="Enter your email address"
-            value={application.email}
-            onChange={handleApplicationChange}
-            required
-          />
-
-        </div>
-
-
-        {/* Job Role */}
-
         <div className="form-field">
 
           <label htmlFor="hero-job-role">
-            Job Role
+            Konse Pad par kaam karna chahte hain? (Job Role)
           </label>
 
           <select
@@ -242,46 +232,31 @@ function Home() {
             <option value="">
               Select the position you're applying for
             </option>
-
             <option value="Welder">
               Welder
             </option>
-
             <option value="Fitter">
               Fitter
             </option>
-
             <option value="Driver">
               Driver
             </option>
-
             <option value="Site Supervisor">
               Site Supervisor
             </option>
-
             <option value="Store In-charge">
               Store In-charge
             </option>
-
             <option value="Technician">
               Technician
             </option>
-
           </select>
-
         </div>
-
-
-        {/* Experience + Previous Company */}
-
         <div className="form-two-column">
-
           <div className="form-field">
-
             <label htmlFor="hero-experience">
-              Experience
+              Aapke paas kitna anubhav hai? (Experience)
             </label>
-
             <select
               id="hero-experience"
               name="experience"
@@ -289,43 +264,30 @@ function Home() {
               onChange={handleApplicationChange}
               required
             >
-
               <option value="">
                 Select
               </option>
-
               <option value="Fresher">
-                Fresher
+                Naya hu 
               </option>
-
               <option value="0-1 Years">
-                0–1 Years
+                0–1 saal
               </option>
-
               <option value="1-3 Years">
-                1–3 Years
+                1–3 saal
               </option>
-
               <option value="3-5 Years">
-                3–5 Years
+                3–5 saal
               </option>
-
               <option value="5+ Years">
-                5+ Years
+                5+ saal
               </option>
-
             </select>
-
           </div>
-
-
           <div className="form-field">
-
             <label htmlFor="hero-company">
-              Previous Company
-              <span> (If experienced)</span>
+              Pichli Company ka naam (Previous Company)
             </label>
-
             <input
               id="hero-company"
               type="text"
@@ -334,31 +296,20 @@ function Home() {
               value={application.previousCompany}
               onChange={handleApplicationChange}
             />
-
           </div>
-
         </div>
-
-
-        {/* Resume */}
-
         <div className="form-field">
-
           <label htmlFor="hero-resume">
-            Upload Resume
+            Resume dalein (PDF)
           </label>
-
           <div className="resume-upload">
-
             <input
               id="hero-resume"
               type="file"
               name="resume"
               accept=".pdf,application/pdf"
               onChange={handleApplicationChange}
-              required
             />
-
             <div className="upload-content">
               <span className="upload-icon">
                 ↑
@@ -374,14 +325,12 @@ function Home() {
             </div>
           </div>
         </div>
-        {/* Message */}
 
         {formMessage && (
           <div className="hero-form-message">
             {formMessage}
           </div>
         )}
-        {/* Submit */}
 
         <button
           type="submit"
@@ -395,7 +344,7 @@ function Home() {
           regarding suitable job opportunities.
         </p>
       </form>
-    </div>
+    </div> */}
   </div>
 </section>
 
@@ -410,15 +359,16 @@ function Home() {
 
         <div className="section-heading">
 
-          <div className="eyebrow">
-            JOB OPPORTUNITIES
+          <div className="eyebrow" data-aos="fade-up">
+            Explore Our Open Positions
+            
           </div>
 
-          <h2>
-            Explore Our Open Positions
+          <h2 data-aos="fade-up">
+           JOB OPPORTUNITIES
           </h2>
 
-          <p>
+          <p data-aos="fade-up" data-aos-delay="100">
             Choose a role that matches your skills
             and start your journey with us.
           </p>
@@ -426,7 +376,7 @@ function Home() {
         </div>
 
 
-        <div className="jobs-grid">
+        <div className="jobs-grid" >
 
           {jobs.map((job) => (
 
@@ -434,6 +384,7 @@ function Home() {
               to={`/jobs/${job.id}`}
               className="job-card"
               key={job.id}
+              data-aos="fade-right" data-aos-delay="200"
             >
 
               <img
@@ -476,12 +427,8 @@ function Home() {
     {/* LEFT SIDE */}
     <div className="why-visual">
 
-      {/* <div className="why-tag">
-        <span></span>
-        WHY MSD ENGINEERING
-      </div> */}
 
-      <h2>
+      <h2 data-aos="fade-up" data-aos-delay="80">
         WHY 
         <span> JOIN US</span>
       </h2>
@@ -495,7 +442,7 @@ function Home() {
       {/* Career Journey */}
       <div className="career-path">
 
-        <div className="career-step">
+        <div className="career-step" data-aos="fade-up" data-aos-delay="100">
           <div className="step-number">01</div>
           <div>
             <strong>Learn</strong>
@@ -505,7 +452,7 @@ function Home() {
 
         <div className="career-line"></div>
 
-        <div className="career-step">
+        <div className="career-step" data-aos="fade-up" data-aos-delay="300">
           <div className="step-number">02</div>
           <div>
             <strong>Grow</strong>
@@ -515,7 +462,7 @@ function Home() {
 
         <div className="career-line"></div>
 
-        <div className="career-step">
+        <div className="career-step" data-aos="fade-up" data-aos-delay="500">
           <div className="step-number">03</div>
           <div>
             <strong>Lead</strong>
@@ -524,16 +471,6 @@ function Home() {
         </div>
 
       </div>
-
-      {/* Floating Badge */}
-      {/* <div className="why-floating-card">
-        <div className="floating-icon">✦</div>
-
-        <div>
-          <strong>YOUR SKILLS</strong>
-          <span>CAN TAKE YOU FURTHER</span>
-        </div>
-      </div> */}
 
     </div>
 
@@ -549,7 +486,7 @@ function Home() {
   </div>
   <div className="why-points-list">
     {/* Point 1 */}
-    <div className="why-point">
+    <div className="why-point" data-aos="fade-left" data-aos-delay="900">
       <div className="why-point-icon">
         ✓
       </div>
@@ -563,7 +500,7 @@ function Home() {
       </div>
     </div>
     {/* Point 2 */}
-    <div className="why-point">
+    <div className="why-point" data-aos="fade-left" data-aos-delay="1000">
       <div className="why-point-icon">
         ✓
       </div>
@@ -577,7 +514,7 @@ function Home() {
       </div>
     </div>
     {/* Point 3 */}
-    <div className="why-point">
+    <div className="why-point" data-aos="fade-left" data-aos-delay="1100">
       <div className="why-point-icon">
         ✓
       </div>
@@ -591,7 +528,7 @@ function Home() {
       </div>
     </div>
     {/* Point 4 */}
-    <div className="why-point">
+    <div className="why-point" data-aos="fade-left" data-aos-delay="1200">
       <div className="why-point-icon">
         ✓
       </div>
@@ -605,7 +542,7 @@ function Home() {
       </div>
     </div>
     {/* Point 5 */}
-    <div className="why-point">
+    <div className="why-point" data-aos="fade-left" data-aos-delay="1300">
       <div className="why-point-icon">
         ✓
       </div>
@@ -619,7 +556,7 @@ function Home() {
       </div>
     </div>
     {/* Point 6 */}
-    <div className="why-point">
+    <div className="why-point" data-aos="fade-left" data-aos-delay="1400">
       <div className="why-point-icon">
         ✓
       </div>
@@ -669,6 +606,7 @@ function Home() {
           <button
             className="btn btn-primary"
             onClick={scrollToJobs}
+            data-aos="fade-right" data-aos-delay="200"
           >
             Find Your Role →
           </button>
