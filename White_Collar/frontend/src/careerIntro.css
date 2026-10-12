@@ -1,0 +1,528 @@
+/*CAREER GROWTH JOURNEY */
+
+.careers-intro {
+  position: relative;
+  overflow: hidden;
+  padding: 70px 0 65px;
+  background:
+    radial-gradient(ellipse at 0% 50%, #fff0e4 0%, transparent 34%),
+    radial-gradient(ellipse at 100% 50%, #eaf4ff 0%, transparent 35%),
+    #ffffff;
+}
+.career-growth-container {
+  position: relative;
+  z-index: 1;
+}
+/* HEADING */
+.career-growth-heading {
+  max-width: 850px;
+  margin: 0 auto 38px;
+  text-align: center;
+}
+.growth-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #e87010;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+.growth-eyebrow span {
+  width: 30px;
+  height: 1px;
+  background: #e87010;
+}
+.career-growth-heading h2 {
+  margin-top: 15px;
+  color: #14233d;
+  font-size: clamp(32px, 3.8vw, 47px);
+  font-weight: 850;
+  line-height: 1.14;
+  letter-spacing: -1.5px;
+}
+
+.career-growth-heading .heading-orange {
+  color: #e87010;
+}
+.career-growth-heading .heading-blue {
+  color: #0871dc;
+}
+.career-growth-heading>p {
+  max-width: 690px;
+  margin: 15px auto 0;
+  color: #63718a;
+  font-size: 14px;
+  line-height: 1.8;
+}
+/* TWO PANELS */
+.career-paths-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px;
+  align-items: stretch;
+}
+.career-path-card {
+  --path-color: #f36b08;
+  --path-dark: #bd4c00;
+  --path-light: #fff0e4;
+  --path-border: #ffd8ba;
+  --path-light-line: #ffd2a8;
+  --path-bg: #fffaf5;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 27px 27px 20px;
+  overflow: hidden;
+  border: 1px solid var(--path-border);
+  border-top: 4px solid var(--path-color);
+  border-radius: 23px;
+  background:
+    radial-gradient(circle at 90% 20%, var(--path-light) 0%, transparent 36%),
+    linear-gradient(145deg, #ffffff, var(--path-bg));
+  box-shadow: 0 15px 40px rgba(24, 45, 75, 0.055);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.career-path-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 48px rgba(24, 45, 75, 0.09);
+}
+.experienced-path {
+  --path-color: #0878ed;
+  --path-dark: #004890;
+  --path-light: #e9f4ff;
+  --path-border: #c8e1ff;
+  --path-light-line: #b5d9ff;
+  --path-bg: #f5faff;
+}
+
+/* PANEL HEADER */
+.career-path-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.career-path-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 61px;
+  height: 61px;
+  flex-shrink: 0;
+  border-radius: 17px;
+  background: var(--path-light);
+  color: var(--path-color);
+}
+.career-path-tag {
+  max-width: 78%;
+  padding: 8px 12px;
+  border: 1px solid var(--path-border);
+  border-radius: 999px;
+  background: var(--path-light);
+  color: var(--path-dark);
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 1.1px;
+  text-align: center;
+}
+/* PANEL COPY */
+.career-path-title {
+  position: relative;
+  z-index: 2;
+  margin-top: 22px;
+}
+.career-path-title h3 {
+  color: #14233d;
+  font-size: clamp(23px, 2.25vw, 30px);
+  font-weight: 850;
+  line-height: 1.23;
+  letter-spacing: -0.7px;
+}
+.career-path-title h3 span {
+  color: var(--path-color);
+}
+.career-path-title>p {
+  max-width: 450px;
+  min-height: 58px;
+  margin-top: 12px;
+  color: #596b86;
+  font-size: 13px;
+  line-height: 1.8;
+}
+/*STAIRCASE AND UPWARD ARROW*/
+.career-staircase {
+  position: relative;
+  margin-top: 13px;
+  padding-top: 105px;
+  isolation: isolate;
+}
+/* Large clear rising arrow */
+.staircase-arrow {
+  position: absolute;
+  z-index: 0;
+  top: 8px;
+  left: 1%;
+  width: 98%;
+  height: 200px;
+  overflow: visible;
+  pointer-events: none;
+}
+/* Finish / destination marker */
+.staircase-finish {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: var(--path-dark);
+  text-align: center;
+}
+.staircase-trophy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 47px;
+  height: 47px;
+  border-radius: 15px;
+  background: var(--path-light);
+  color: var(--path-color);
+}
+.staircase-finish>span {
+  max-width: 130px;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 0.9px;
+}
+/* STEPS */
+.staircase-steps {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: end;
+  gap: 10px;
+}
+.stair-step {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 170px;
+  padding: 13px 12px;
+  border: 1px solid var(--path-border);
+  border-top: 5px solid var(--path-color);
+  border-radius: 13px 13px 5px 5px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 12px 27px rgba(25, 45, 70, 0.065);
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
+}
+/* Progressive heights create the staircase */
+.stair-step-1 {
+  min-height: 165px;
+}
+.stair-step-2 {
+  min-height: 195px;
+}
+.stair-step-3 {
+  min-height: 225px;
+}
+.stair-step:hover {
+  box-shadow: 0 18px 32px rgba(25, 45, 70, 0.12);
+}
+.stair-step-1:hover {
+  transform: translateY(-4px);
+}
+.stair-step-2:hover {
+  transform: translateY(-4px);
+}
+.stair-step-3:hover {
+  transform: translateY(-4px);
+}
+.stair-step-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  margin-bottom: 17px;
+  color: var(--path-color);
+}
+.stair-step-number {
+  font-size: clamp(21px, 2.1vw, 29px);
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+.stair-step-top svg {
+  flex-shrink: 0;
+}
+.stair-step h4 {
+  color: #172744;
+  font-size: 12px;
+  font-weight: 850;
+  line-height: 1.5;
+}
+.stair-step p {
+  margin-top: 8px;
+  color: #63718a;
+  font-size: 11px;
+  line-height: 1.65;
+}
+/* FOOTER */
+.career-path-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 23px;
+  padding-top: 17px;
+  border-top: 1px solid var(--path-border);
+}
+.career-footer-message {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #43536b;
+  font-size: 11px;
+  font-weight: 750;
+  line-height: 1.6;
+}
+.career-footer-message svg {
+  flex-shrink: 0;
+  color: var(--path-color);
+}
+.career-path-footer>a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  border-radius: 14px;
+  background: var(--path-light);
+  color: var(--path-dark);
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+.career-path-footer>a:hover {
+  background: var(--path-color);
+  color: #ffffff;
+  transform: translate(2px, -2px);
+}
+
+/*TABLET*/
+@media (max-width: 1050px) {
+  .career-paths-grid {
+    gap: 16px;
+  }
+  .career-path-card {
+    padding: 21px 17px 17px;
+  }
+  .career-path-title h3 {
+    font-size: 23px;
+  }
+  .staircase-steps {
+    gap: 7px;
+  }
+  .stair-step {
+    padding: 11px 8px;
+  }
+  .stair-step h4 {
+    font-size: 11px;
+  }
+  .stair-step p {
+    font-size: 10px;
+  }
+  .stair-step-number {
+    font-size: 22px;
+  }
+}
+
+/*MOBILE*/
+@media (max-width: 720px) {
+  .careers-intro {
+    padding: 58px 0 50px;
+  }
+
+  .career-growth-heading {
+    margin-bottom: 30px;
+    text-align: left;
+  }
+
+  .growth-eyebrow {
+    justify-content: flex-start;
+    font-size: 10px;
+    letter-spacing: 1.4px;
+  }
+
+  .career-growth-heading h2 {
+    font-size: clamp(30px, 7vw, 40px);
+    letter-spacing: -1px;
+  }
+
+  .career-growth-heading>p {
+    font-size: 13px;
+  }
+
+  .career-paths-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .career-path-card {
+    padding: 22px 17px 18px;
+    border-radius: 18px;
+  }
+
+  .career-path-title h3 {
+    font-size: clamp(23px, 6vw, 29px);
+  }
+
+  .career-path-title>p {
+    min-height: 0;
+  }
+
+  .career-staircase {
+    margin-top: 20px;
+    padding-top: 92px;
+  }
+
+  .staircase-arrow {
+    top: 5px;
+    height: 175px;
+  }
+
+  .staircase-steps {
+    gap: 7px;
+  }
+
+  .stair-step {
+    padding: 10px 8px;
+    min-height: 165px;
+  }
+
+  .stair-step-1 {
+    min-height: 160px;
+  }
+
+  .stair-step-2 {
+    min-height: 185px;
+  }
+
+  .stair-step-3 {
+    min-height: 210px;
+  }
+
+  .stair-step-number {
+    font-size: 20px;
+  }
+
+  .stair-step-top {
+    margin-bottom: 13px;
+  }
+
+  .stair-step-top svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .stair-step h4 {
+    font-size: 10px;
+  }
+
+  .stair-step p {
+    font-size: 10px;
+    line-height: 1.55;
+  }
+
+  .staircase-trophy {
+    width: 40px;
+    height: 40px;
+  }
+
+  .staircase-finish>span {
+    font-size: 7px;
+  }
+
+  .growth-benefits {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 17px;
+  }
+
+  .growth-benefit {
+    padding: 0;
+  }
+}
+
+/* SMALL PHONES */
+
+@media (max-width: 380px) {
+  .career-path-card {
+    padding: 18px 12px 15px;
+  }
+
+  .career-path-tag {
+    max-width: 72%;
+    font-size: 8px;
+    letter-spacing: 0.4px;
+  }
+
+  .career-path-title h3 {
+    font-size: 22px;
+  }
+
+  .staircase-steps {
+    gap: 5px;
+  }
+
+  .stair-step {
+    padding: 9px 6px;
+  }
+
+  .stair-step h4 {
+    font-size: 9px;
+  }
+
+  .stair-step p {
+    font-size: 9px;
+  }
+
+  .stair-step-number {
+    font-size: 18px;
+  }
+
+  .stair-step-top svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .career-footer-message {
+    font-size: 10px;
+  }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .career-path-card,
+  .stair-step,
+  .career-path-footer>a {
+    transition: none;
+  }
+
+  .career-path-card:hover,
+  .stair-step:hover,
+  .career-path-footer>a:hover {
+    transform: none;
+  }
+}

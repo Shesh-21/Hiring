@@ -128,8 +128,6 @@ function ApplicationForm() {
                     required
                   />
                 </div>
-
-
                 <div className="form-group">
                   <label htmlFor="email">
                     Email Address <span>*</span>
@@ -150,51 +148,20 @@ function ApplicationForm() {
 
 
               {/* POSITION */}
-
               <div className="form-group">
                 <label htmlFor="position">
-                  Applying For <span>*</span>
+                  Apply For<span>*</span>
                 </label>
 
-                <select
+                <input
                   id="position"
                   name="position"
+                  type="text"
+                  placeholder="Enter position you want to apply for"
                   value={formData.position}
                   onChange={handleChange}
                   required
-                >
-                  <option value="">
-                    Select a position
-                  </option>
-
-                  <option value="Human Resources Executive">
-                    Human Resources Executive
-                  </option>
-
-                  <option value="Purchase Executive">
-                    Purchase Executive
-                  </option>
-
-                  <option value="Project Executive">
-                    Project Executive
-                  </option>
-
-                  <option value="Administration Executive">
-                    Administration Executive
-                  </option>
-
-                  <option value="Sales Executive">
-                    Sales Executive
-                  </option>
-
-                  <option value="Data Operator">
-                    Data Operator
-                  </option>
-
-                  <option value="Accounts Executive">
-                    Accounts Executive
-                  </option>
-                </select>
+                />
               </div>
 
 
