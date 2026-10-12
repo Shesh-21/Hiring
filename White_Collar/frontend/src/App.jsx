@@ -8,6 +8,7 @@ import JobDetails from "./pages/JobDetails";
 import WhyJoinUs from "./components/WhyJoinUs";
 import ApplicationForm from "./components/ApplicationForm";
 import FAQ from "./components/FAQ";
+import Opportunities from "./components/Opportunities";
 
 function Home() {
   return (
@@ -16,10 +17,9 @@ function Home() {
 
       <main>
         <Hero />
-        <CareersIntro />
-        <OpenPositions />
-        <WhyJoinUs/>
         <ApplicationForm/>
+        <CareersIntro />
+        <Opportunities/>
         <FAQ/>
       </main>
     </>
